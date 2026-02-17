@@ -1,0 +1,128 @@
+:root {
+    --bg-color: #f0f2f5;
+    --glass-bg: rgba(255, 255, 255, 0.7);
+    --glass-border: rgba(255, 255, 255, 0.4);
+    --text-color: #1d1d1f;
+    --accent: #007AFF;
+    --input-bg: rgba(255, 255, 255, 0.5);
+}
+
+[data-theme="dark"] {
+    --bg-color: #000000;
+    --glass-bg: rgba(28, 28, 30, 0.8);
+    --glass-border: rgba(255, 255, 255, 0.1);
+    --text-color: #f5f5f7;
+    --accent: #0A84FF;
+    --input-bg: rgba(44, 44, 46, 0.6);
+}
+
+* {
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", Arial, sans-serif;
+    background-color: var(--bg-color);
+    background-image: radial-gradient(circle at 50% 50%, var(--accent) 0%, transparent 50%);
+    background-attachment: fixed;
+    background-size: 200% 200%;
+    color: var(--text-color);
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    padding: 20px;
+    transition: background-color 0.4s ease;
+}
+
+.glass-card {
+    background: var(--glass-bg);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid var(--glass-border);
+    border-radius: 30px;
+    padding: 25px;
+    width: 100%;
+    max-width: 550px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+    overflow: hidden;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 12px 16px;
+    margin: 8px 0;
+    border-radius: 12px;
+    border: 1px solid var(--glass-border);
+    background: var(--input-bg);
+    color: var(--text-color);
+    font-size: 16px;
+    outline: none;
+    transition: 0.2s;
+}
+
+input:focus {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 4px rgba(0, 122, 255, 0.1);
+}
+
+button {
+    background: var(--accent);
+    color: white;
+    border: none;
+    padding: 14px 20px;
+    border-radius: 14px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 15px;
+    transition: transform 0.2s, opacity 0.2s;
+}
+
+button:active {
+    transform: scale(0.97);
+}
+
+.btn-icon {
+    background: transparent;
+    font-size: 1.5rem;
+    padding: 5px;
+    color: var(--text-color);
+}
+
+.hidden { display: none !important; }
+
+.patient-card {
+    background: rgba(255,255,255,0.05);
+    border-radius: 18px;
+    padding: 15px;
+    margin-bottom: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid var(--glass-border);
+}
+
+.scroll-area {
+    max-height: 450px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding-right: 8px;
+}
+
+/* Scrollbar Style */
+.scroll-area::-webkit-scrollbar { width: 4px; }
+.scroll-area::-webkit-scrollbar-thumb {
+    background: rgba(150, 150, 150, 0.3);
+    border-radius: 10px;
+}
+
+#search-container {
+    margin-bottom: 20px;
+}
+
+#search-input {
+    background: var(--input-bg) url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="grey" viewBox="0 0 16 16"><path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/></svg>') no-repeat 12px center;
+    padding-left: 40px;
+}

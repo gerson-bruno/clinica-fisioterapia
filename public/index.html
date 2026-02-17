@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerson - Fisioterapia</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="glass-card">
+        <header style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+            <h2 style="margin:0; font-size: 1.2rem;">Gerson - Fisioterapia</h2>
+            <button onclick="toggleTheme()" class="btn-icon">🌓</button>
+        </header>
+
+        <div id="login-section">
+            <h3>Acesso ao Sistema</h3>
+            <input type="text" id="user" placeholder="Usuário">
+            <input type="password" id="pass" placeholder="Senha">
+            <button onclick="login()" style="width:100%; margin-top:10px;">Entrar</button>
+            <p style="text-align:center; font-size: 0.8rem; margin-top:15px;">
+                Não tem conta? <a href="#" onclick="showSection('register-section')" style="color:var(--accent)">Criar agora</a>
+            </p>
+        </div>
+
+        <div id="register-section" class="hidden">
+            <h3>Nova Conta</h3>
+            <input type="text" id="reg-user" placeholder="Escolha um Usuário">
+            <input type="password" id="reg-pass" placeholder="Escolha uma Senha">
+            <button onclick="registrarUsuario()" style="width:100%; margin-top:10px;">Finalizar Cadastro</button>
+            <button onclick="showSection('login-section')" style="width:100%; margin-top:10px; background:#666">Voltar ao Login</button>
+        </div>
+
+        <div id="main-section" class="hidden">
+            <div style="display:flex; gap: 10px; margin-bottom: 15px;">
+                <button onclick="abrirNovoPaciente()" style="flex:2">+ Novo Paciente</button>
+                <button onclick="location.reload()" style="flex:1; background:#ff4d4d">Sair</button>
+            </div>
+
+            <div id="search-container">
+                <input type="text" id="search-input" placeholder="Buscar paciente por nome..." onkeyup="filtrarPacientes()">
+            </div>
+
+            <div id="lista-pacientes" class="scroll-area"></div>
+        </div>
+
+        <div id="paciente-form" class="hidden">
+            <h3 id="titulo-paciente">Cadastro de Paciente</h3>
+            <input type="text" id="p-nome" placeholder="Nome Completo">
+            <label>Data de Nascimento:</label>
+            <input type="date" id="p-nasc">
+            <textarea id="p-diag" placeholder="Diagnóstico Clínico" rows="3"></textarea>
+            <div style="display: flex; gap: 10px;">
+                <button onclick="salvarPaciente()" style="flex:1">Salvar</button>
+                <button onclick="showSection('main-section')" style="flex:1; background:#666">Cancelar</button>
+            </div>
+        </div>
+        
+        <div id="aval-form" class="hidden">
+            <h3>Nova Avaliação Fisioterapêutica</h3>
+            <div class="scroll-area">
+                <input type="text" id="av-nome" placeholder="Nome do Avaliador">
+                <input type="number" id="av-idade" placeholder="Idade do Paciente">
+                <textarea id="av-diag-clin" placeholder="Diagnóstico Clínico"></textarea>
+                <textarea id="av-exames" placeholder="Exames de Imagens/Complementares"></textarea>
+                <input type="number" id="av-dor" placeholder="Escala de Dor (0-10)">
+                <textarea id="av-hma" placeholder="HMA (História da Moléstia Atual)"></textarea>
+                <textarea id="av-aval" placeholder="Avaliação Fisioterapêutica"></textarea>
+                <textarea id="av-diag-fisio" placeholder="Diagnóstico Fisioterapêutico"></textarea>
+                <textarea id="av-obs" placeholder="Observações"></textarea>
+            </div>
+            <div style="display: flex; gap: 10px; margin-top:15px;">
+                <button onclick="salvarAvaliacao()" style="flex:1">Salvar Avaliação</button>
+                <button onclick="showSection('main-section')" style="flex:1; background:#666">Voltar</button>
+            </div>
+        </div>
+
+        <div id="ver-avaliacoes-section" class="hidden">
+            <h3>Histórico de Avaliações</h3>
+            <div id="lista-avaliacoes-conteudo"></div>
+            <button onclick="showSection('main-section')" style="margin-top:15px; background:#666; width: 100%;">Voltar ao Painel</button>
+        </div>
+
+        <div id="detalhe-aval-section" class="hidden">
+            <h3>Detalhes da Avaliação</h3>
+            <div id="detalhe-conteudo" class="scroll-area" style="background: rgba(0,0,0,0.05); padding: 15px; border-radius: 10px; font-size: 0.9rem;"></div>
+            <button onclick="showSection('ver-avaliacoes-section')" style="margin-top:15px; background:#666; width: 100%;">Voltar ao Histórico</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
