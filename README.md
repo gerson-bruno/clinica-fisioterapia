@@ -3,9 +3,14 @@
 Sistema de gerenciamento de pacientes e avaliações fisioterapêuticas com design moderno inspirado no iOS (Glassmorphism).
 
 ## 🌐 Visualize o Projeto Online
+
 Para visualizar o projeto em funcionamento, clique no link abaixo:
 👉 **[Clínica de Fisioterapia Online](https://clinica-fisioterapia.onrender.com/)**
 
+> **Acesso rápido:** > - **Usuário:** `Gerson`
+> - **Senha:** `123456`
+> 
+> *Você também pode criar um novo usuário clicando em "Registrar" na tela inicial.*
 ---
 
 ## 📸 Preview do Sistema
