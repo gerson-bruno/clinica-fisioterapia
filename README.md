@@ -7,10 +7,12 @@ Sistema de gerenciamento de pacientes e avaliações fisioterapêuticas com desi
 Para visualizar o projeto em funcionamento, clique no link abaixo:
 👉 **[Clínica de Fisioterapia Online](https://clinica-fisioterapia.onrender.com/)**
 
-> **Acesso rápido:** > - **Usuário:** `Gerson`
+> **🔐 Acesso rápido:**
+> - **Usuário:** `Gerson`
 > - **Senha:** `123456`
 > 
-> *Você também pode criar um novo usuário clicando em "Registrar" na tela inicial.*
+> *Também é possível criar uma conta nova em "Registrar".*
+
 ---
 
 ## 📸 Preview do Sistema
@@ -44,4 +46,9 @@ Para visualizar o projeto em funcionamento, clique no link abaixo:
 5. Acesse: `http://localhost:3000`
 
 ---
-Desenvolvido como projeto de portfólio para a área de Análise e Desenvolvimento de Sistemas.
+
+✅ **Projeto Finalizado** - Focado em performance, UX moderna e arquitetura escalável para sistemas de saúde.
+
+---
+
+💡 **Nota:** Os dados de pacientes cadastrados no link online são resetados periodicamente para garantir a limpeza do ambiente de demonstração.
