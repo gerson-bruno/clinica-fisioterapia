@@ -1,0 +1,112 @@
+{
+  "usuarios": [
+    { "user": "Gerson", "pass": "123456" }
+  ],
+  "pacientes": [
+    {
+      "id": 1,
+      "nome": "Arnaldo Ferreira de Souza",
+      "nascimento": "1958-05-15",
+      "diagnostico": "Pós-operatório de Artroplastia Total de Quadril (ATQ) à direita.",
+      "avaliacoes": [
+        {
+          "idAval": 1708170001,
+          "data": "15/02/2026",
+          "avaliador": "Dr. Gerson",
+          "idade": "67",
+          "diagnosticoClinico": "Pós-operatório tardio (45 dias) de ATQ à direita.",
+          "exames": "RX de quadril mostrando prótese bem posicionada e consolidação inicial.",
+          "dor": "4",
+          "hma": "Relata dor ao iniciar a marcha e cansaço excessivo em membro operado.",
+          "avaliacaoFisica": "Encurtamento de flexores de quadril; Trendelenburg positivo; Fraqueza de glúteo médio (Grau 3).",
+          "diagnosticoFisio": "Limitação funcional na marcha por déficit de força e estabilidade de quadril.",
+          "observacoes": "Iniciado treino de marcha com bengala unilateral."
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "nome": "Beatriz Helena Silveira",
+      "nascimento": "1985-10-22",
+      "diagnostico": "Hérnia de disco lombar (L4-L5) com irradiação para membro inferior esquerdo.",
+      "avaliacoes": [
+        {
+          "idAval": 1708170002,
+          "data": "16/02/2026",
+          "avaliador": "Dr. Gerson",
+          "idade": "40",
+          "diagnosticoClinico": "Hérnia de Disco Lombar L4-L5.",
+          "exames": "RM de coluna lombar com extrusão discal póstero-lateral.",
+          "dor": "8",
+          "hma": "Dor aguda que irradia para o pé esquerdo, piora ao tossir.",
+          "avaliacaoFisica": "Teste de Lasègue positivo a 30°; Parestesia em dermátomo de L5; Rigidez lombar severa.",
+          "diagnosticoFisio": "Radiculopatia compressiva com perda de mobilidade segmentar.",
+          "observacoes": "Orientado repouso relativo e exercícios de centralização de dor (McKenzie)."
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "nome": "Cláudio Roberto Santos",
+      "nascimento": "1972-02-03",
+      "diagnostico": "Tendinopatia do manguito rotador no ombro dominante.",
+      "avaliacoes": [
+        {
+          "idAval": 1708170003,
+          "data": "17/02/2026",
+          "avaliador": "Dr. Gerson",
+          "idade": "54",
+          "diagnosticoClinico": "Tendinopatia de Supraespinhal.",
+          "exames": "Ultrassom de ombro direito com sinais de inflamação.",
+          "dor": "6",
+          "hma": "Dor noturna que impede o sono; dificuldade para AVDs.",
+          "avaliacaoFisica": "Arco doloroso entre 60° e 120°; Testes de Neer e Hawkins positivos.",
+          "diagnosticoFisio": "Síndrome do impacto subacromial.",
+          "observacoes": "Foco inicial em controle inflamatório e estabilização escapular."
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "nome": "Doralice Maria da Silva",
+      "nascimento": "1945-12-12",
+      "diagnostico": "Sequelas de AVC isquêmico em hemisfério esquerdo.",
+      "avaliacoes": [
+        {
+          "idAval": 1708170004,
+          "data": "17/02/2026",
+          "avaliador": "Dr. Gerson",
+          "idade": "80",
+          "diagnosticoClinico": "Sequelas de AVC Isquêmico.",
+          "exames": "Tomografia de crânio antiga com lesão em território de ACM esquerda.",
+          "dor": "0",
+          "hma": "Paciente apresenta hemiparesia à direita há 2 anos.",
+          "avaliacaoFisica": "Espasticidade grau 2 (Ashworth); Marcha ceifante com andador.",
+          "diagnosticoFisio": "Hemiparesia espástica com deficit de equilíbrio dinâmico.",
+          "observacoes": "Realizado treino de transferência e descarga de peso."
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "nome": "Enzo Gabriel Oliveira",
+      "nascimento": "2010-08-08",
+      "diagnostico": "Entorse de tornozelo grau II (Ligamento talofibular anterior).",
+      "avaliacoes": [
+        {
+          "idAval": 1708170005,
+          "data": "17/02/2026",
+          "avaliador": "Dr. Gerson",
+          "idade": "15",
+          "diagnosticoClinico": "Entorse de Tornozelo Grau II.",
+          "exames": "RX negativo para fraturas. Edema visível em maleolo lateral.",
+          "dor": "3",
+          "hma": "Lesão ocorrida durante jogo de futebol há 10 dias.",
+          "avaliacaoFisica": "Instabilidade em teste de gaveta anterior; Déficit proprioceptivo.",
+          "diagnosticoFisio": "Instabilidade ligamentar funcional com edema residual.",
+          "observacoes": "Iniciado exercícios de propriocepção em plano instável."
+        }
+      ]
+    }
+  ]
+}
