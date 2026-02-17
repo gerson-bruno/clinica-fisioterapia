@@ -7,6 +7,9 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const app = express();
 
+// Configuração da Porta para o Render
+const PORT = process.env.PORT || 3000;
+
 app.use(express.json());
 app.use(express.static(path.join(__dirname, 'public')));
 
@@ -16,6 +19,7 @@ const defaultData = {
     pacientes: [] 
 };
 
+// Inicialização do Banco de Dados JSON
 const db = await JSONFilePreset('db.json', defaultData);
 
 // --- ROTAS DE USUÁRIO ---
@@ -79,4 +83,13 @@ app.get('/api/pacientes/:id/avaliacoes', (req, res) => {
     res.json(paciente ? paciente.avaliacoes : []);
 });
 
-app.listen(3000, () => console.log('🚀 Servidor em http://localhost:3000'));
+// Inicialização dinâmica da porta
+app.listen(PORT, () => {
+    console.log(`
+    ==================================================
+    🚀 Servidor Online!
+    📡 Porta: ${PORT}
+    🔗 Local: http://localhost:${PORT}
+    ==================================================
+    `);
+});
